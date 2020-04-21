@@ -13,7 +13,7 @@ experience int not null,
 trainerID int,
 PRIMARY KEY(id),
 FOREIGN KEY trainerID REFERENCES Trainer(id),
-Constraint CHECK (REGEXP_LIKE(experience,'0|1|2|3','i'))
+check(experience >=0 and experience <=4)
 )
 
 
