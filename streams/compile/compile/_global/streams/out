@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\zb009\Documents\databaseproject\app\views\layout.scala.html:23:94: not found: value h[0m
+[0m[[0m[31merror[0m] [0m[0m            <form action="/bodyMassIndex" method="POST" href="@routes.ClientController.index(h, w)" >[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                             ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\zb009\Documents\databaseproject\app\views\layout.scala.html:23:97: not found: value w[0m
+[0m[[0m[31merror[0m] [0m[0m            <form action="/bodyMassIndex" method="POST" href="@routes.ClientController.index(h, w)" >[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
