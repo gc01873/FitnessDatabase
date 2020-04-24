@@ -1,0 +1,42 @@
+@import java.util
+@import misc.Search
+@(session: Http.Session)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/bootstrap.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/bootstrap-table.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/style.css")">
+    </head>
+    <body>
+        <center>
+            <div style="background-color:midnightblue;" class="container p-3 my-3 bg-dark text-white"> 
+                <h1 style="font-size: 50px; font-weight: 100;">
+                    Georgia Southern Workout Builder
+                </h1> 
+            </div></center>
+            <div class="sidenav" style="background-color:seashell; width:200px; align">
+                <h2>
+                Body Mass Index Calculator
+                </h2>
+                <form action="/bodyMassIndex" method="POST" href="@routes.ClientController.index()" >
+                    <label for="weight">Weight(in lbs):</label>
+                    <input type="text" id="weight" name="weight"><br><br>
+                    <label for="height">Height(in inches):</label>
+                    <input type="text" id="height" name="height"><br><br>
+                    <input type="submit" value="Submit">
+                    <script>
+                    function getHeight(){
+                        var height = document.getElementById("height").value;
+                        return height;
+                    }
+                    function getWeight(){
+                        var weight = document.getElementById("weight").value;
+                        return weight;
+                    }
+                    </script>
+                </form> 
+            </div>
+    </body>
+</html>

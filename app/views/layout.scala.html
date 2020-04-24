@@ -1,0 +1,52 @@
+@import helper._
+
+@(title: String)(session: Http.Session)(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>@title</title>
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/bootstrap.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/bootstrap-table.min.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/style.css")">
+    </head>
+    <body>
+        <div style="background-color:midnightblue;" class="container p-3 my-3 bg-dark text-white"> 
+            <h1 style="font-size: 50px; font-weight: 100;">
+                Georgia Southern Workout Builder
+            </h1> 
+        </div></center>
+        <div class="sidenav" style="background-color:seashell; width:200px; align">
+            <h2>
+            Body Mass Index Calculator
+            </h2>
+            <form action="/bodyMassIndex" method="POST" href="@routes.ClientController.index(h, w)" >
+                <label for="weight">Weight(in lbs):</label>
+                <input type="text" id="weight" name="weight"><br><br>
+                <label for="height">Height(in inches):</label>
+                <input type="text" id="height" name="height"><br><br>
+                <input type="submit" value="Submit">
+                <script type='text/javascript'>
+                    var h = new getHeight();
+                    var w = new getWeight();
+                    function getHeight(){
+                    this.height = document.getElementById("height").value;
+                    return height;
+                }
+                function getWeight(){
+                     this.weight = document.getElementById("weight").value;
+                    return weight;
+                }
+                </script>
+            </form> 
+        </div>
+        <div class="container">
+            @content
+        </div>
+
+        <script src="@routes.Assets.versioned("js/jquery-3.4.1.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("js/bootstrap.min.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.versioned("js/bootstrap-table.min.js")"></script>
+        <script src="@routes.Assets.versioned("js/myscript.js")" type="text/javascript"></script>
+    </body>
+</html>
